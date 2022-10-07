@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Analógico</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="head">
+        <h1 class="title">o'clock</h1>
+        <label class="switch" for="switch">
+            <input type="checkbox" id="switch">
+            <i class="bi bi-sun"></i>
+            <i class="bi bi-moon"></i>
+        </label>
+    </div>
+    <div class="clock">
+        <div class="riscos">
+            <div class="risco" style="transform: rotate(0deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(30deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(60deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(90deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(120deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(150deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(180deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(210deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(240deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(270deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(300deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(330deg)"><div class="ponto"></div></div>
+        </div>
+        <div class="pointers">
+            <div class="p seconds"></div>
+            <div class="p minutes"></div>
+            <div class="p hours"></div>
+            <div class="center-point"></div>
+        </div>
+    </div>
+    <div class="digital">--:--:--</div>
+    <div class="week"></div>
+    <footer>
+        <a href="https://www.linkedin.com/in/gusta-rodrigues" target="_blank">© Developed by Gustavo Rodrigues</a>
+    </footer>
+
+    <script type="module" src="src/scripts/main.js"></script>
+</body>
+</html>
