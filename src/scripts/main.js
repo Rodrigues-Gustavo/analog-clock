@@ -59,6 +59,5 @@ const updateClock = () => {
 
 const fixZero = time => time < 10 ? `0${time}` : time;
 
-
 setInterval(updateClock, 1000);
 updateClock();
