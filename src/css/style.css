@@ -68,9 +68,8 @@ input[type=checkBox] {
     height: 300px;
     background-color: var(--second-color);
     border-radius: 50%;
-    border: var(--border);
     position: relative;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .clock .number {
