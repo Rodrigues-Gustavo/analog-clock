@@ -1,5 +1,4 @@
 # analog-clock
-#### 🚧o projeto está passando por modificação.
 ### Projeto desenvolvido para portifólio pessoal.
 
  <a href="#skills">• Skills utilizadas</a>
@@ -13,9 +12,10 @@
 
 <a href="https://rodrigues-gustavo.github.io/analog-clock/">testar projeto</a>
 
+
 <div align="center">
  
-![Black Minimalist Linktree Background (1)](https://user-images.githubusercontent.com/102608021/195114782-93a1f232-5dd3-4e20-b914-636836bca4a5.png)
+![gif-oclock](https://user-images.githubusercontent.com/102608021/197068321-84aba07c-cd89-4a9c-86f4-a3734493be50.gif)
 
 </div>
 
