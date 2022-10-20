@@ -1,4 +1,4 @@
-import { digitalElement, secondsElement, minutesElement, hoursElement, weekElement } from './variables.js'
+import { secondsElement, minutesElement, hoursElement, weekElement, digitalElement } from './variables.js'
 const html = document.querySelector('html');
 const checkbox =  document.querySelector('#switch');
 
@@ -6,7 +6,7 @@ function toggle() {
     checkbox.addEventListener('change',() => {
         html.classList.toggle('light-mode')
     });
-}
+};
 
 toggle();
 
@@ -35,29 +35,31 @@ const months = [
     "Dez",
 ];
 
+const setRotation = (element,rotationPercentage) => {
+    element.style.setProperty("--rotation", rotationPercentage * 360);
+};
+
 const updateClock = () => {
-    let now = new Date();
-    let hour = now.getHours();
-    let minute = now.getMinutes();
-    let second = now.getSeconds();
-    let date = now.getDate()
-    let day = now.getDay();
-    let month = now.getMonth();
+    const currentDate = new Date();
+    const secondsPercentage = currentDate.getSeconds() / 60;
+    const minutesPercentage = (secondsPercentage + currentDate.getMinutes()) / 60;
+    const hoursPercentage = (minutesPercentage + currentDate.getHours()) / 12;
+    const digitalSeconds = currentDate.getSeconds();
+    const digitalMinutes = currentDate.getMinutes();
+    const digitalHours = currentDate.getHours();
+    const date = currentDate.getDate()
+    const day = currentDate.getDay();
+    const month = currentDate.getMonth();
 
+    setRotation(secondsElement, secondsPercentage);
+    setRotation(minutesElement, minutesPercentage);
+    setRotation(hoursElement, hoursPercentage);
 
-    digitalElement.innerHTML = `${fixZero(hour)}:${fixZero(minute)}:${fixZero(second)}`;
+    digitalElement.innerHTML = `${fixZero(digitalHours)}:${fixZero(digitalMinutes)}:${fixZero(digitalSeconds)}`;
     weekElement.innerHTML =  `${days[day]}, ${date} ${months[month]}`;
-
-    let secondDeg = ((360 / 60) * second) - 90;
-    let minuteDeg = ((360 / 60) * minute) - 90;
-    let hourDeg = ((360 / 12) * hour) + ((30/60) * minute) - 90;
-
-    secondsElement.style.transform = `rotate(${secondDeg}deg)`;
-    minutesElement.style.transform = `rotate(${minuteDeg}deg)`;
-    hoursElement.style.transform = `rotate(${hourDeg}deg)`;
-}
+};
 
 const fixZero = time => time < 10 ? `0${time}` : time;
 
-setInterval(updateClock, 1000);
 updateClock();
+setInterval(updateClock, 1000);
